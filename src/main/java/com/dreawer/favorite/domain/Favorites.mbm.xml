@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dreawer.favorite.domain.Favorites">
+
+    <!-- ================================================================================== -->
+    <!-- SQL新增																				-->
+    <!-- ================================================================================== -->
+
+    <!-- 保存收藏夹信息 -->
+    <insert id="save" parameterType="Favorites">
+        INSERT INTO favi_favorites(id, colr_id, colr_idt_id, name, cre_tim)
+        VALUES(#{id}, #{collector.id}, #{collector.id}, #{name}, #{createTime})
+    </insert>
+
+    <!-- ================================================================================== -->
+    <!-- SQL删除																				-->
+    <!-- ================================================================================== -->
+    <!-- 删除收藏夹 -->
+    <delete id="delete" parameterType="String">
+        DELETE FROM favi_favorites
+        WHERE id = #{id}
+    </delete>
+    <!-- ================================================================================== -->
+    <!-- SQL更新																				-->
+    <!-- ================================================================================== -->
+
+    <!-- 更新收藏夹信息 -->
+    <update id="updateFavorites" parameterType="Favorites">
+        UPDATE favi_favorites
+        SET updr_id = #{collector.id}, updr_idt_id = #{collector.id}, upd_tim = #{updateTime}, name = #{name}
+        WHERE id = #{id}
+    </update>
+
+    <!-- ================================================================================== -->
+    <!-- SQL查询																				-->
+    <!-- ================================================================================== -->
+
+    <!-- 根据收藏夹名称查询收藏夹信息 -->
+    <select id="findFavoritesByName" parameterType="Map" resultMap="favoritesResultMap">
+        SELECT
+        <include refid="basicFields"/>
+        FROM favi_favorites
+        WHERE colr_idt_id = #{collector.id} AND name = #{name}
+    </select>
+
+    <!-- 根据收藏夹id查询收藏夹信息 -->
+    <select id="findFavoritesById" parameterType="Map" resultMap="favoritesResultMap">
+        SELECT
+        <include refid="basicFields"/>
+        FROM favi_favorites
+        WHERE id = #{id}
+    </select>
+
+    <!-- 查询指定收藏者和指定内容所对应的收藏信息 -->
+    <select id="findFavoritesByCollector" parameterType="Map" resultMap="favoritesResultMap">
+        SELECT
+        <include refid="basicFields"/>
+        FROM favi_favorites
+        WHERE colr_idt_id = #{collector.id}
+    </select>
+
+    <!-- ================================================================================== -->
+    <!-- 公用SQL定义																			-->
+    <!-- ================================================================================== -->
+
+    <!-- 基本信息字段 -->
+    <sql id="basicFields">
+        id, colr_id, colr_idt_id, name, cre_tim
+    </sql>
+
+    <!-- ================================================================================== -->
+    <!-- 结果集映射																			-->
+    <!-- ================================================================================== -->
+
+    <!-- 简化映射 -->
+    <resultMap id="favoritesResultMap" type="Favorites">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="collector.id" column="colr_id"/>
+        <!-- <result property="collector.id" column="colr_idt_id" /> -->
+        <result property="createTime" column="cre_tim"/>
+        <result property="updateTime" column="upd_tim"/>
+    </resultMap>
+</mapper>
