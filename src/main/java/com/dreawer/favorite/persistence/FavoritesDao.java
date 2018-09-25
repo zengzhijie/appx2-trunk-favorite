@@ -21,7 +21,7 @@ import com.dreawer.favorite.domain.Favorites;
  * @since Favorite 1.0
  */
 @Repository(FAVORITES_DAO)
-public class FavoritesDao extends MyBatisBaseDao<Favorites, String> {
+public class FavoritesDao extends MyBatisBaseDao<Favorites> {
 
     /**
      * 保存收藏夹信息。
@@ -38,7 +38,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites, String> {
     /**
      * 删除收藏夹信息。
      *
-     * @param favorites 收藏夹信息。
+     * @param id 收藏夹信息。
      * @return 成功删除的记录数。
      * @author kael
      * @since 1.0
@@ -62,14 +62,14 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites, String> {
     /**
      * 查询指定收藏者所对应的收藏夹信息。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
      * @author Kael
      * @since 1.0
      */
-    public List<Favorites> findList(User collector) {
+    public List<Favorites> findList(String collectorId) {
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put(COLLECTOR, collector);
+        params.put(COLLECTOR, collectorId);
         return selectList("findFavoritesByCollector", params);
     }
 
@@ -81,10 +81,10 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites, String> {
      * @author Kael
      * @since 1.0
      */
-    public Favorites findByName(String name, User collector) {
+    public Favorites findByName(String name, String collectorId) {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put(NAME, name);
-        params.put(COLLECTOR, collector);
+        params.put(COLLECTOR, collectorId);
         return selectOne("findFavoritesByName", params);
     }
 

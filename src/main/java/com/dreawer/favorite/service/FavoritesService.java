@@ -3,15 +3,10 @@ import static com.dreawer.favorite.constants.ServiceConstants.*;
 import static com.dreawer.favorite.constants.DAOConstants.*;
 
 import java.util.List;
-
 import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
-
-
 import com.dreawer.favorite.domain.Favorites;
 import com.dreawer.favorite.persistence.FavoritesDao;
-import com.dreawer.sso.domain.User;
 
 /**
  * <CODE>FavoritesService</CODE> 收藏信息服务。
@@ -64,13 +59,13 @@ public class FavoritesService {
     /**
      * 获取收藏夹信息。
      *
-     * @param id 收藏夹内容id。
+     * @param collectorId 收藏夹内容id。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
      * @author David Dai
      * @since 1.0
      */
-    public List<Favorites> getFavoritesList(User collector) {
-        return favoritesDao.findList(collector);
+    public List<Favorites> getFavoritesList(String collectorId) {
+        return favoritesDao.findList(collectorId);
     }
 
     /**
@@ -81,8 +76,8 @@ public class FavoritesService {
      * @author David Dai
      * @since 1.0
      */
-    public Favorites getFavoritesByName(String name, User collector) {
-        return favoritesDao.findByName(name, collector);
+    public Favorites getFavoritesByName(String name, String collectorId) {
+        return favoritesDao.findByName(name, collectorId);
     }
 
     /**

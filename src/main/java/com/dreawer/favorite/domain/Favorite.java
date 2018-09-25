@@ -4,10 +4,7 @@ import java.sql.Timestamp;
 
 
 import com.dreawer.domain.BaseDomain;
-//import com.dreawer.dream.domain.BaseDomain;
-import com.dreawer.dream.domain.Content;
 import com.dreawer.favorite.lang.ContentStatus;
-import com.dreawer.sso.domain.User;
 
 /**
  * <CODE>Favorite</CODE> 收藏实体类。
@@ -19,9 +16,13 @@ import com.dreawer.sso.domain.User;
 public class Favorite extends BaseDomain {
     private static final long serialVersionUID = 7406372133507991038L;
 
-    private User collector = null; // 收藏者
 
-    private Content content = null; // 被收藏内容
+
+    private String collectorId;      //收藏者Id；
+
+    private String contentId;   //收藏内容Id;
+
+    private String contentCategory;  //被收藏内容类别
 
     private Timestamp createTime = null; // 收藏时间
 
@@ -43,41 +44,64 @@ public class Favorite extends BaseDomain {
     // getter 和 setter 方法
     // --------------------------------------------------------------------------------
 
+
+
+
     /**
-     * 获取属性 <TT>collector</TT>（收藏者）的值。
+     * 获取属性 <TT>collectorId</TT>（收藏者）的值。
      *
-     * @return <TT>collector</TT> 收藏者。
+     * @return <TT>collectorId</TT> 收藏者。
      */
-    public User getCollector() {
-        return collector;
+    public String getCollectorId() {
+        return collectorId;
     }
 
     /**
      * 设置属性 <TT>collector</TT>（收藏者）的值。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      */
-    public void setCollector(User collector) {
-        this.collector = collector;
+    public void setCollectorId(String collectorId) {
+        this.collectorId = collectorId;
     }
 
     /**
-     * 获取属性 <TT>content</TT>（被收藏内容）的值。
+     * 获取属性 <TT>content</TT>内容类别的值。
      *
-     * @return <TT>content</TT> 被收藏内容。
+     * @return <TT>content</TT> 内容内别。
      */
-    public Content getContent() {
-        return content;
+    public String getContentId() {
+        return contentId;
     }
 
     /**
-     * 设置属性 <TT>content</TT>（被收藏内容）的值。
+     * 设置属性 <TT>collector</TT>（收藏内容）的值。
      *
-     * @param content 被收藏内容。
+     * @param contentId 收藏内容。
      */
-    public void setContent(Content content) {
-        this.content = content;
+    public void setContentId(String contentId) {
+        this.contentId = contentId;
     }
+
+    /**
+     * 获取属性 <TT>getContentCategory</TT>（收藏内容）的值。
+     *
+     * @return <TT>getContentCategory</TT> 收藏内容。
+     */
+    public String getContentCategory() {
+        return contentCategory;
+    }
+
+    /**
+     * 设置属性 <TT>collector</TT>（收藏者）的值。
+     *
+     * @param contentCategory 收藏者类别。
+     */
+    public void setContentCategory(String contentCategory) {
+        this.contentCategory = contentCategory;
+    }
+
+
 
     /**
      * 获取属性 <TT>createTime</TT>（收藏时间）的值。

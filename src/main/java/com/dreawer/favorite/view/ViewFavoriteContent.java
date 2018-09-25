@@ -40,7 +40,7 @@ public class ViewFavoriteContent {
     /**
      * 设置属性 <TT>id</TT>（内容id）的值。
      *
-     * @param id 内容id。
+     * @param contentId 内容id。
      */
     public void setContentId(String contentId) {
         this.contentId = contentId;

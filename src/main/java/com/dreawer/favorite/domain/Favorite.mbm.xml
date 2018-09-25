@@ -10,7 +10,7 @@
     <!-- 保存收藏信息 -->
     <insert id="save" parameterType="Favorite">
         INSERT INTO favi_favorite(id, colr_id, colr_idt_id, cont_id, cont_ctg, cre_tim)
-        VALUES(#{id}, #{collector.id}, #{collector.id}, #{content.id}, #{content.category}, #{createTime})
+        VALUES(#{id}, #{collectorId}, #{collectorId}, #{contentId}, #{contentCategory}, #{createTime})
     </insert>
 
     <!-- ================================================================================== -->
@@ -24,14 +24,14 @@
     <!-- 更新收藏信息状态 -->
     <delete id="updateFavorite" parameterType="Favorite">
         UPDATE favi_favorite
-        SET updr_id = #{collector.id}, updr_idt_id = #{collector.id}, upd_tim = #{updateTime}
+        SET updr_id = #{collectorId}, updr_idt_id = #{collectorId}, upd_tim = #{updateTime}
         <if test="status != null">
             ,status = #{status}
         </if>
-        <if test="content.category != null">
-            ,cont_ctg = #{content.category}
+        <if test="contentCategory != null">
+            ,cont_ctg = #{contentCategory}
         </if>
-        WHERE colr_idt_id = #{collector.id} AND cont_id = #{content.id}
+        WHERE colr_idt_id = #{collectorId} AND cont_id = #{contentId}
     </delete>
 
     <!-- ================================================================================== -->
@@ -51,8 +51,8 @@
         SELECT
         <include refid="basicFields"/>
         FROM favi_favorite
-        WHERE colr_idt_id = #{collector.id}
-        AND cont_id = #{content.id}
+        WHERE colr_idt_id = #{collectorId}
+        AND cont_id = #{contentId}
     </select>
 
     <!-- 查询指定收藏者的收藏信息 -->
@@ -60,7 +60,7 @@
         SELECT
         <include refid="basicFields"/>
         FROM favi_favorite
-        WHERE colr_idt_id = #{collector.id}
+        WHERE colr_idt_id = #{collectorId}
         AND status = #{status}
         <if test="startTime != null">
             AND cre_tim &lt; #{startTime}
@@ -87,11 +87,11 @@
     <!-- 简化映射 -->
     <resultMap id="favoriteResultMap" type="Favorite">
         <result property="id" column="id"/>
-        <result property="collector.id" column="colr_id"/>
+        <result property="collectorId" column="colr_id"/>
         <result property="status" column="status"/>
-        <!-- <result property="collector.id" column="colr_idt_id" /> -->
-        <result property="content.id" column="cont_id"/>
-        <result property="content.category" column="cont_ctg"/>
+         <result property="collectorId" column="colr_idt_id" />
+        <result property="contentId" column="cont_id"/>
+        <result property="contentCategory" column="cont_ctg"/>
         <result property="createTime" column="cre_tim"/>
         <result property="updateTime" column="upd_tim"/>
     </resultMap>

@@ -3,7 +3,6 @@ package com.dreawer.favorite.domain;
 import java.sql.Timestamp;
 
 import com.dreawer.domain.BaseDomain;
-//import com.dreawer.sso.domain.User;
 
 /**
  * <CODE>Favorites</CODE> 收藏夹实体类。
@@ -15,7 +14,9 @@ import com.dreawer.domain.BaseDomain;
 public class Favorites extends BaseDomain {
     private static final long serialVersionUID = 7406372133507991038L;
 
-    private User collector = null; // 收藏者
+
+
+    private String collectorId;   //收藏者
 
     private String name = null; // 收藏夹名称
 
@@ -39,21 +40,21 @@ public class Favorites extends BaseDomain {
     // --------------------------------------------------------------------------------
 
     /**
-     * 获取属性 <TT>collector</TT>（收藏者）的值。
+     * 获取属性 <TT>collectorId</TT>（收藏者）的值。
      *
-     * @return <TT>collector</TT> 收藏者。
+     * @return <TT>collectorId</TT> 收藏者。
      */
-    public User getCollector() {
-        return collector;
+    public String getCollectorId() {
+        return collectorId;
     }
 
     /**
      * 设置属性 <TT>collector</TT>（收藏者）的值。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      */
-    public void setCollector(User collector) {
-        this.collector = collector;
+    public void setCollectorId(String collectorId) {
+        this.collectorId = collectorId;
     }
 
     /**

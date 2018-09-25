@@ -10,7 +10,7 @@
     <!-- 保存收藏夹信息 -->
     <insert id="save" parameterType="Favorites">
         INSERT INTO favi_favorites(id, colr_id, colr_idt_id, name, cre_tim)
-        VALUES(#{id}, #{collector.id}, #{collector.id}, #{name}, #{createTime})
+        VALUES(#{id}, #{collectorId}, #{collectorId}, #{name}, #{createTime})
     </insert>
 
     <!-- ================================================================================== -->
@@ -28,7 +28,7 @@
     <!-- 更新收藏夹信息 -->
     <update id="updateFavorites" parameterType="Favorites">
         UPDATE favi_favorites
-        SET updr_id = #{collector.id}, updr_idt_id = #{collector.id}, upd_tim = #{updateTime}, name = #{name}
+        SET updr_id = #{collectorId}, updr_idt_id = #{collectorId}, upd_tim = #{updateTime}, name = #{name}
         WHERE id = #{id}
     </update>
 
@@ -41,7 +41,7 @@
         SELECT
         <include refid="basicFields"/>
         FROM favi_favorites
-        WHERE colr_idt_id = #{collector.id} AND name = #{name}
+        WHERE colr_idt_id = #{collectorId} AND name = #{name}
     </select>
 
     <!-- 根据收藏夹id查询收藏夹信息 -->
@@ -57,7 +57,7 @@
         SELECT
         <include refid="basicFields"/>
         FROM favi_favorites
-        WHERE colr_idt_id = #{collector.id}
+        WHERE colr_idt_id = #{collectorId}
     </select>
 
     <!-- ================================================================================== -->
@@ -77,8 +77,8 @@
     <resultMap id="favoritesResultMap" type="Favorites">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
-        <result property="collector.id" column="colr_id"/>
-        <!-- <result property="collector.id" column="colr_idt_id" /> -->
+        <result property="collectorId" column="colr_id"/>
+         <result property="collectorId" column="colr_idt_id" />
         <result property="createTime" column="cre_tim"/>
         <result property="updateTime" column="upd_tim"/>
     </resultMap>

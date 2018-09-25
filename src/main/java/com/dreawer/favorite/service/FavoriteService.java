@@ -4,13 +4,10 @@ package com.dreawer.favorite.service;
 
 import java.sql.Timestamp;
 import java.util.List;
-
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
-import com.dreawer.dream.domain.Content;
 import com.dreawer.favorite.domain.Favorite;
 import com.dreawer.favorite.persistence.FavoriteDao;
-import com.dreawer.sso.domain.User;
 
 import static com.dreawer.favorite.constants.ServiceConstants.*;
 import static com.dreawer.favorite.constants.DAOConstants.*;
@@ -66,54 +63,54 @@ public class FavoriteService {
     /**
      * 获取指定用户针对指定内容的指定收藏信息。
      *
-     * @param collector 收藏者。
-     * @param content   被收藏内容。
+     * @param collectorId 收藏者。
+     * @param contentId   被收藏内容。
      * @return 收藏信息。如果存在返回收藏信息，否则返回null。
      * @author David Dai
      * @since 1.0
      */
-    public Favorite getFavorite(User collector, Content content) {
-        return favoriteDao.findFavorite(collector, content);
+    public Favorite getFavorite(String collectorId, String contentId) {
+        return favoriteDao.findFavorite(collectorId, contentId);
     }
 
     /**
      * 获取指定收藏者的收藏信息。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      * @param pagesize  分页最大记录数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
      * @author David Dai
      * @since 1.0
      */
-    public List<Favorite> getFavorites(User collector, Integer pagesize) {
-        return getFavorites(collector, null, pagesize);
+    public List<Favorite> getFavorites(String collectorId, Integer pagesize) {
+        return getFavorites(collectorId, null, pagesize);
     }
 
     /**
      * 获取指定收藏者的收藏信息。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      * @param startTime 起始时间。
      * @param pagesize  分页最大记录数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
      * @author David Dai
      * @since 1.0
      */
-    public List<Favorite> getFavorites(User collector, Timestamp startTime, Integer pagesize) {
-        return favoriteDao.findFavorites(collector, startTime, pagesize);
+    public List<Favorite> getFavorites(String collectorId, Timestamp startTime, Integer pagesize) {
+        return favoriteDao.findFavorites(collectorId, startTime, pagesize);
     }
 
     /**
      * 获取指定收藏者的收藏信息。
      *
-     * @param collector 收藏者。
+     * @param collectorId 收藏者。
      * @param startTime 起始时间。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
      * @author David Dai
      * @since 1.0
      */
-    public List<Favorite> getFavorites(User collector, Timestamp startTime) {
-        return getFavorites(collector, startTime, null);
+    public List<Favorite> getFavorites(String collectorId, Timestamp startTime) {
+        return getFavorites(collectorId, startTime, null);
     }
 
 }

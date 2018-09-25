@@ -23,7 +23,7 @@ import com.dreawer.favorite.lang.ContentStatus;
  * @since Favorite 1.0
  */
 @Repository(FAVORITE_DAO)
-public class FavoriteDao extends MyBatisBaseDao<Favorite, String> {
+public class FavoriteDao extends MyBatisBaseDao<Favorite> {
 
     /**
      * 保存收藏信息。
@@ -64,32 +64,32 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite, String> {
     /**
      * 查询指定收藏者和指定内容所对应的收藏信息。
      *
-     * @param collector 收藏者。
-     * @param content   被收藏内容。
+     * @param collectorId 收藏者。
+     * @param contentId   被收藏内容。
      * @return 收藏信息。如果存在返回收藏信息，否则返回null。
      * @author David Dai
      * @since 1.0
      */
-    public Favorite findFavorite(User collector, Content content) {
+    public Favorite findFavorite(String collectorId, String contentId) {
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put(COLLECTOR, collector);
-        params.put(CONTENT, content);
+        params.put(COLLECTOR, collectorId);
+        params.put(CONTENT_ID, contentId);
         return selectOne("findFavoriteByCollector", params);
     }
 
     /**
      * 查询指定收藏者的收藏信息。
      *
-     * @param collector  收藏人的id。
+     * @param collectorId  收藏人的id。
      * @param startTime  查询纪录开始时间。
      * @param maxResults 分页记录总数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
      * @author David Dai
      * @since 1.0
      */
-    public List<Favorite> findFavorites(User collector, Timestamp startTime, Integer maxResults) {
+    public List<Favorite> findFavorites(String collectorId, Timestamp startTime, Integer maxResults) {
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put(COLLECTOR, collector);
+        params.put(COLLECTOR, collectorId);
         params.put(STATUS, ContentStatus.DEFAULT);
         params.put(START_TIME, startTime);
         params.put(MAX_RESULTS, maxResults);

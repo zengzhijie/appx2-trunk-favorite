@@ -11,9 +11,9 @@ package com.dreawer.favorite.constants;
 public abstract class DomainConstants {
 
     /**
-     * 用户
+     * 用户ID
      */
-    public static final String USER = "user";
+    public static final String USER_ID = "userId";
 
     /**
      * 用户登录令牌
@@ -21,9 +21,14 @@ public abstract class DomainConstants {
     public static final String TOKEN = "token";
 
     /**
-     * 内容
+     * 内容id
      */
-    public static final String CONTENT = "content";
+    public static final String CONTENT_ID = "contentId";
+
+    /**
+     * 内容类别
+     */
+    public static final String CONTENT_CATEGORY = "contentCategory";
 
     /**
      * 收藏
@@ -33,7 +38,7 @@ public abstract class DomainConstants {
     /**
      * 收藏者
      */
-    public static final String COLLECTOR = "collector";
+    public static final String COLLECTOR = "collectorId";
 
     /**
      * ID号
