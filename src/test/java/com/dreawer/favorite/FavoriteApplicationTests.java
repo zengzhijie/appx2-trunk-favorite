@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TrunkApplicationTests {
+public class FavoriteApplicationTests {
 
     @Autowired
     private WebApplicationContext context;

@@ -56,7 +56,7 @@ public class FavoriteController extends BaseController {
      * @auther: zengzhijie
      */
 
-    @RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
+    /*@RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode addFavorites(HttpServletRequest req,
                               @RequestBody @Valid AddFavoritesForm form, BindingResult result) {
@@ -74,9 +74,30 @@ public class FavoriteController extends BaseController {
         favorites.setCollectorId(collectorId);
         favorites.setCreateTime(getNow());
         favoritesService.add(favorites);
+
+        return Success.SUCCESS(favorites);
+    }*/
+
+
+    ///////////////本地测试服务器
+    @RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
+    public @ResponseBody
+    ResponseCode addFavorites(HttpServletRequest req) {
+
+        String  collectorId = "qwe";
+        String formname = "qwe";
+        Favorites oldFavorites = favoritesService.getFavoritesByName(formname, collectorId);
+        if (oldFavorites != null) {
+            return  Error.APPSERVER;
+        }
+        Favorites favorites = new Favorites();
+        favorites.setName(formname);
+        favorites.setCollectorId(collectorId);
+        favorites.setCreateTime(getNow());
+        favoritesService.add(favorites);
+
         return Success.SUCCESS(favorites);
     }
-
 
     /**
      * 功能描述: 删除收藏夹。

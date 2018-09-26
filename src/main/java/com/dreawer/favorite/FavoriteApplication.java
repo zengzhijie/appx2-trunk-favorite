@@ -9,11 +9,11 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class TrunkApplication {
+public class FavoriteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TrunkApplication.class, args);
-        ResponseCode.initNamespace("trunk");
+        SpringApplication.run(FavoriteApplication.class, args);
+        ResponseCode.initNamespace("favorite");
 
     }
 
