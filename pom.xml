@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dreawer</groupId>
-    <artifactId>trunk</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>favorite</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>trunk</name>
@@ -77,9 +77,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>
-                spring-cloud-starter-eureka
-            </artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
