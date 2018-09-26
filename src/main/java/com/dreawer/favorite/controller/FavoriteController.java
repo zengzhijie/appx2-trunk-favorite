@@ -56,7 +56,7 @@ public class FavoriteController extends BaseController {
      * @auther: zengzhijie
      */
 
-    @RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
+    /*@RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode addFavorites(HttpServletRequest req,
                               @RequestBody @Valid AddFavoritesForm form, BindingResult result) {
@@ -71,6 +71,28 @@ public class FavoriteController extends BaseController {
         }
         Favorites favorites = new Favorites();
         favorites.setName(form.getName());
+        favorites.setCollectorId(collectorId);
+        favorites.setCreateTime(getNow());
+        favoritesService.add(favorites);
+
+        return Success.SUCCESS(favorites);
+    }*/
+
+    @RequestMapping(value = REQ_FAVORITES_ADD)
+    public @ResponseBody
+    ResponseCode addFavorites(HttpServletRequest req) {
+
+        //根据网关用户id查询用户
+       // String collectorId = req.getHeader("userid");
+        String collectorId = "qwe";
+        String name = "qwe";
+
+        Favorites oldFavorites = favoritesService.getFavoritesByName(name, collectorId);
+        if (oldFavorites != null) {
+            return  Error.APPSERVER;
+        }
+        Favorites favorites = new Favorites();
+        favorites.setName(name);
         favorites.setCollectorId(collectorId);
         favorites.setCreateTime(getNow());
         favoritesService.add(favorites);
