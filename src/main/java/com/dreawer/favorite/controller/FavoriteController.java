@@ -80,7 +80,7 @@ public class FavoriteController extends BaseController {
 
 
     ///////////////本地测试服务器
-    @RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
+    @RequestMapping(value = REQ_FAVORITES_ADD)
     public @ResponseBody
     ResponseCode addFavorites(HttpServletRequest req) {
 
