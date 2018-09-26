@@ -37,10 +37,9 @@ public class FavoriteApplicationTests {
 
     @Test
     public void testTicket() throws  Exception{
-        /*//测试添加收藏夹
+       /* //测试添加收藏夹
         AddFavoritesForm form = new AddFavoritesForm();
-        form.setName("测试收藏夹001");
-
+        form.setName("测试添加收藏夹002");
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
         String requestJson = ow.writeValueAsString(form);
@@ -49,13 +48,12 @@ public class FavoriteApplicationTests {
                 .content(requestJson)
                 .header("userId", UUID.randomUUID().toString().replace("-", ""))
                 .sessionAttr("111", "111"))
-                .andDo(print());
-*/
+                .andDo(print());*/
 
 
-        /*//测试删除收藏夹
+       /* //测试删除收藏夹
         UpdateFavoritesForm form = new UpdateFavoritesForm();
-        form.setId("123");
+        form.setId("9bb5dedb2e514befbbd5b8ef46440a30");
         form.setName("测试收藏夹001");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -65,10 +63,10 @@ public class FavoriteApplicationTests {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(requestJson)
                 //.header("userId", UUID.randomUUID().toString().replace("-", ""))
-                .header("userId", "cb46ba341d6f4de0adfd980d8b8246be")
+                .header("userId", "b67d3a5790374bda97e43c45f60ccb78")
                 .sessionAttr("111", "111"))
-                .andDo(print());*/
-
+                .andDo(print());
+*/
 
         /*//测试更新收藏夹
         UpdateFavoritesForm form = new UpdateFavoritesForm();
@@ -87,22 +85,22 @@ public class FavoriteApplicationTests {
                 .andDo(print());*/
 
 
-        /*//测试获取收藏夹列表
+        //测试获取收藏夹列表
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
         mvc.perform(MockMvcRequestBuilders.get(REQ_FAVORITES_LIST)
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 //.header("userId", UUID.randomUUID().toString().replace("-", ""))
-                .header("userId", "1625d9f1ede2468897302dbd21e93314")
+                .header("userId", "84ba09c6c6ef42f1941b75a27be0eedd")
                 .sessionAttr("111", "111"))
-                .andDo(print());*/
+                .andDo(print());
 
 
 
         /*//测试收藏内容
         AddFavoriteForm form = new AddFavoriteForm();
-        form.setObjectId("123");
-        form.setCategory("测试类别");
+        form.setObjectId("345");
+        form.setCategory("测试类别1");
 
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
@@ -111,7 +109,7 @@ public class FavoriteApplicationTests {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(requestJson)
                 //.header("userId", UUID.randomUUID().toString().replace("-", ""))
-                .header("userId", "c957822db95c4d92834ea9ed5b08c096")
+                .header("userId", "84ba09c6c6ef42f1941b75a27be0eedd")
                 .sessionAttr("111", "111"))
                 .andDo(print());*/
 
@@ -145,7 +143,7 @@ public class FavoriteApplicationTests {
                 .andDo(print());*/
 
 
-        //测试更新收藏（收藏分类）
+        /*//测试更新收藏（收藏分类）
         AddFavoriteForm form = new AddFavoriteForm();
         form.setObjectId("123");
         form.setCategory("修改测试类别");
@@ -158,7 +156,9 @@ public class FavoriteApplicationTests {
                 //.header("userId", UUID.randomUUID().toString().replace("-", ""))
                 .header("userId", "9d331de366ac4bb08bd1063170842c13")
                 .sessionAttr("111", "111"))
-                .andDo(print());
+                .andDo(print());*/
+
+
     }
 
 }

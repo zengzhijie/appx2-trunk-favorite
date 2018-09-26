@@ -1258,3 +1258,515 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-09-26 15:22:11,631 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-10120"]
 2018-09-26 15:22:11,648 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool:180 - Using a shared selector for servlet write/read
 2018-09-26 15:22:11,672 [main] INFO  com.dreawer.favorite.FavoriteApplication:57 - Started FavoriteApplication in 11.523 seconds (JVM running for 13.615)
+2018-09-26 16:15:09,878 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:15:12,899 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:15:12,903 [main] INFO  com.dreawer.favorite.FavoriteApplication:597 - The following profiles are active: local
+2018-09-26 16:15:13,544 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:15:14,361 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:15:14,376 [main] INFO  org.apache.catalina.core.StandardService:180 - Starting service [Tomcat]
+2018-09-26 16:15:14,376 [main] INFO  org.apache.catalina.core.StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-09-26 16:15:14,535 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 - Initializing Spring embedded WebApplicationContext
+2018-09-26 16:15:14,931 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:15:15,623 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:15:15,786 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:15:15,816 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:15:16,464 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:15:18,665 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:15:18,669 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:15:18,669 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:15:18,674 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:15:18,674 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:15:19,302 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:15:19,319 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:15:19,369 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:15:19,503 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:15:19,519 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-09-26 16:15:19,540 [main] INFO  com.dreawer.favorite.FavoriteApplication:57 - Started FavoriteApplication in 11.884 seconds (JVM running for 13.319)
+2018-09-26 16:17:47,644 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:17:50,678 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:17:50,682 [main] INFO  com.dreawer.favorite.FavoriteApplication:597 - The following profiles are active: local
+2018-09-26 16:17:51,374 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:17:52,208 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:17:52,220 [main] INFO  org.apache.catalina.core.StandardService:180 - Starting service [Tomcat]
+2018-09-26 16:17:52,220 [main] INFO  org.apache.catalina.core.StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-09-26 16:17:52,378 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 - Initializing Spring embedded WebApplicationContext
+2018-09-26 16:17:52,754 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:17:53,406 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:17:53,563 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:17:53,591 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:17:54,227 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:17:56,411 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:17:56,415 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:17:56,416 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:17:56,421 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:17:56,421 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:17:56,965 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:17:56,983 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:17:57,014 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:17:57,147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:17:57,163 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-09-26 16:17:57,186 [main] INFO  com.dreawer.favorite.FavoriteApplication:57 - Started FavoriteApplication in 11.904 seconds (JVM running for 13.226)
+2018-09-26 16:19:01,160 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:19:04,142 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:19:04,146 [main] INFO  com.dreawer.favorite.FavoriteApplication:597 - The following profiles are active: local
+2018-09-26 16:19:04,780 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:19:05,578 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:19:05,590 [main] INFO  org.apache.catalina.core.StandardService:180 - Starting service [Tomcat]
+2018-09-26 16:19:05,590 [main] INFO  org.apache.catalina.core.StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-09-26 16:19:05,746 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 - Initializing Spring embedded WebApplicationContext
+2018-09-26 16:19:06,119 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:19:06,784 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:19:06,940 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:19:06,970 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:19:07,611 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:19:09,788 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:19:09,793 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:19:09,793 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:19:09,798 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:19:09,798 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:19:10,359 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:19:10,376 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:19:10,408 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:19:10,543 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:19:10,556 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-09-26 16:19:10,577 [main] INFO  com.dreawer.favorite.FavoriteApplication:57 - Started FavoriteApplication in 11.697 seconds (JVM running for 12.975)
+2018-09-26 16:19:53,832 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:19:56,783 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:19:56,786 [main] INFO  com.dreawer.favorite.FavoriteApplication:597 - The following profiles are active: local
+2018-09-26 16:19:57,436 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:19:58,233 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:19:58,245 [main] INFO  org.apache.catalina.core.StandardService:180 - Starting service [Tomcat]
+2018-09-26 16:19:58,246 [main] INFO  org.apache.catalina.core.StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-09-26 16:19:58,401 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:180 - Initializing Spring embedded WebApplicationContext
+2018-09-26 16:19:58,786 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:19:59,431 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:19:59,588 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:19:59,620 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:20:00,262 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:20:02,455 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:20:02,460 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:20:02,460 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:20:02,465 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:20:02,465 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:20:03,005 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:20:03,039 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:20:03,072 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:20:03,207 [main] INFO  org.apache.coyote.http11.Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-10120"]
+2018-09-26 16:20:03,224 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-09-26 16:20:03,245 [main] INFO  com.dreawer.favorite.FavoriteApplication:57 - Started FavoriteApplication in 11.631 seconds (JVM running for 13.362)
+2018-09-26 16:20:48,803 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:20:52,134 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:20:52,161 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 16:20:53,151 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:20:54,322 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:20:55,542 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:20:55,867 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:20:55,916 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:20:57,025 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:21:00,017 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:21:00,025 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:21:00,026 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:21:00,041 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:21:00,041 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:21:00,637 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:21:00,679 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:21:00,733 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:21:00,965 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 15.318 seconds (JVM running for 17.365)
+2018-09-26 16:21:01,475 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.addFavorites(HttpServletRequest,AddFavoritesForm,BindingResult)use time:11
+2018-09-26 16:21:01,484 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"1",
+		"1",
+		"3",
+		"0",
+		"0",
+		"0"
+	],
+	"checkPoint":"name",
+	"comment":"输入检查错误"
+}
+2018-09-26 16:21:01,530 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 16:21:44,004 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:21:47,093 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:21:47,142 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 16:21:48,063 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:21:49,163 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:21:50,193 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:21:50,460 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:21:50,511 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:21:51,598 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:21:54,459 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:21:54,466 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:21:54,466 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:21:54,476 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:21:54,477 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:21:55,201 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:21:55,241 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:21:55,303 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:21:55,533 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.606 seconds (JVM running for 16.184)
+2018-09-26 16:22:46,854 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.addFavorites(HttpServletRequest,AddFavoritesForm,BindingResult)use time:50661
+2018-09-26 16:22:46,882 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":{
+		"collectorId":"84ba09c6c6ef42f1941b75a27be0eedd",
+		"name":"测试添加收藏夹002",
+		"createTime":"Sep 26,
+		 2018 4:22:44 PM",
+		"id":"6354cda93a7942b6bd805411dc76a317"
+	}
+}
+2018-09-26 16:22:46,943 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 16:53:21,034 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:53:24,038 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:53:24,069 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 16:53:25,006 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:53:26,120 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:53:27,188 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:53:27,473 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:53:27,525 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:53:28,584 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:53:31,563 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:53:31,573 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:53:31,573 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:53:31,586 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:53:31,586 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:53:32,152 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:53:32,194 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:53:32,268 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:53:32,517 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.606 seconds (JVM running for 16.216)
+2018-09-26 16:53:33,205 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.deleteFavorites(HttpServletRequest,UpdateFavoritesForm,BindingResult)use time:451
+2018-09-26 16:53:33,214 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"1",
+		"3",
+		"4",
+		"0",
+		"0",
+		"0"
+	],
+	"checkPoint":"该收藏夹不存在",
+	"comment":"数据库错误"
+}
+2018-09-26 16:53:33,261 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 16:54:32,020 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 16:54:35,128 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 16:54:35,163 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 16:54:36,107 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 16:54:37,150 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 16:54:38,197 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 16:54:38,488 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:54:38,540 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 16:54:39,536 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 16:54:42,470 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 16:54:42,478 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:54:42,479 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:54:42,491 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 16:54:42,492 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 16:54:43,075 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 16:54:43,111 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 16:54:43,164 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 16:54:43,380 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.432 seconds (JVM running for 16.303)
+2018-09-26 16:55:17,216 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.deleteFavorites(HttpServletRequest,UpdateFavoritesForm,BindingResult)use time:33566
+2018-09-26 16:55:17,231 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":{
+		"collectorId":"b67d3a5790374bda97e43c45f60ccb78",
+		"name":"测试收藏夹001",
+		"createTime":"Sep 25,
+		 2018 1:13:08 PM",
+		"id":"9bb5dedb2e514befbbd5b8ef46440a30"
+	}
+}
+2018-09-26 16:55:17,285 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:10:53,795 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:10:56,940 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:10:56,956 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:10:57,912 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:10:59,008 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:11:00,100 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:11:00,402 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:11:00,452 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:11:01,540 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:11:04,543 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:11:04,552 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:11:04,553 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:11:04,563 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:11:04,568 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:11:05,133 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:11:05,167 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:11:05,226 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:11:05,469 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.724 seconds (JVM running for 16.34)
+2018-09-26 17:12:20,530 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.favorite(HttpServletRequest,AddFavoriteForm,BindingResult)use time:74801
+2018-09-26 17:12:20,540 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":{
+		"collectorId":"9d331de366ac4bb08bd1063170842c13",
+		"contentId":"123",
+		"contentCategory":"修改测试类别",
+		"createTime":"Sep 25,
+		 2018 2:42:44 PM",
+		"status":"DEFAULT",
+		"id":"79313b248879419397ed8c912dd0e7e0"
+	}
+}
+2018-09-26 17:12:20,604 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:13:10,677 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:13:13,991 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:13:14,002 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:13:15,100 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:13:16,210 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:13:17,346 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:13:17,671 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:13:17,722 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:13:18,832 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:13:21,814 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:13:21,822 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:13:21,822 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:13:21,833 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:13:21,835 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:13:22,545 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:13:22,585 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:13:22,646 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:13:22,884 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 15.245 seconds (JVM running for 17.132)
+2018-09-26 17:13:36,932 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.favorite(HttpServletRequest,AddFavoriteForm,BindingResult)use time:13765
+2018-09-26 17:13:36,945 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":{
+		"collectorId":"84ba09c6c6ef42f1941b75a27be0eedd",
+		"contentId":"123",
+		"contentCategory":"测试类别1",
+		"id":"88e94ad3c3c74fc683679a831ab10db2"
+	}
+}
+2018-09-26 17:13:36,990 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:16:22,954 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:16:26,033 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:16:26,052 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:16:27,044 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:16:28,153 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:16:29,241 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:16:29,563 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:16:29,610 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:16:30,721 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:16:33,712 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:16:33,719 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:16:33,719 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:16:33,731 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:16:33,731 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:16:34,390 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:16:34,431 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:16:34,496 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:16:35,077 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 15.233 seconds (JVM running for 17.015)
+2018-09-26 17:16:51,155 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.favorite(HttpServletRequest,AddFavoriteForm,BindingResult)use time:15691
+2018-09-26 17:16:51,163 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":{
+		"collectorId":"84ba09c6c6ef42f1941b75a27be0eedd",
+		"contentId":"345",
+		"contentCategory":"测试类别1",
+		"id":"62450483cf6c43b3ba8f180c6046bd18"
+	}
+}
+2018-09-26 17:16:51,220 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:17:59,922 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:18:02,990 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:18:03,002 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:18:04,018 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:18:05,157 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:18:06,248 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:18:06,551 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:18:06,609 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:18:07,716 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:18:10,791 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:18:10,801 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:18:10,802 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:18:10,819 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:18:10,820 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:18:11,474 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:18:11,517 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:18:11,582 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:18:11,855 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 15.09 seconds (JVM running for 16.894)
+2018-09-26 17:18:48,511 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.getFavoritesList(HttpServletRequest)use time:36482
+2018-09-26 17:18:48,520 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":[
+		
+	]
+}
+2018-09-26 17:18:48,593 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:19:41,694 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:19:44,831 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:19:44,844 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:19:45,814 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:19:46,934 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:19:47,972 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:19:48,249 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:19:48,294 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:19:49,398 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:19:52,380 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:19:52,391 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:19:52,392 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:19:52,407 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:19:52,409 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:19:53,027 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:19:53,061 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:19:53,114 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:19:53,341 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.763 seconds (JVM running for 16.355)
+2018-09-26 17:21:25,888 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.getFavoritesList(HttpServletRequest)use time:92390
+2018-09-26 17:21:25,900 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":[
+		{
+			"id":"6354cda93a7942b6bd805411dc76a317",
+			"name":"测试添加收藏夹002",
+			"favoriteList":[
+				
+			]
+		}
+	]
+}
+2018-09-26 17:21:25,960 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:22:40,988 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:22:44,108 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:22:44,122 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:22:45,116 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:22:46,268 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:22:47,346 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:22:47,654 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:22:47,712 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:22:48,840 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:22:51,792 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:22:51,799 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:22:51,800 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:22:51,811 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:22:51,812 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:22:52,477 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:22:52,515 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:22:52,575 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:22:52,805 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 14.881 seconds (JVM running for 16.656)
+2018-09-26 17:27:02,132 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.getFavoritesList(HttpServletRequest)use time:249163
+2018-09-26 17:27:02,144 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":[
+		{
+			"id":"6354cda93a7942b6bd805411dc76a317",
+			"name":"测试添加收藏夹002",
+			"favoriteList":[
+				
+			]
+		}
+	]
+}
+2018-09-26 17:27:02,222 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed
+2018-09-26 17:28:25,617 [background-preinit] INFO  org.hibernate.validator.internal.util.Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-26 17:28:28,824 [main] WARN  o.s.c.c.client.ConfigServicePropertySourceLocator:136 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2018-09-26 17:28:28,840 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:597 - The following profiles are active: local
+2018-09-26 17:28:29,878 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:166 - No MyBatis mapper was found in '[com.dreawer.favorite]' package. Please check your configuration.
+2018-09-26 17:28:31,000 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 - Init DruidDataSource
+2018-09-26 17:28:32,084 [main] INFO  com.alibaba.druid.pool.DruidDataSource:928 - {dataSource-1} inited
+2018-09-26 17:28:32,388 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:28:32,436 [main] WARN  org.springframework.aop.framework.CglibAopProxy:263 - Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2018-09-26 17:28:33,568 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-09-26 17:28:36,596 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration:138 - No spring.application.name found, defaulting to 'application'
+2018-09-26 17:28:36,606 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:28:36,607 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:28:36,620 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2018-09-26 17:28:36,621 [main] INFO  com.netflix.config.sources.URLConfigurationSource:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-09-26 17:28:37,346 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:151 - Context refreshed
+2018-09-26 17:28:37,387 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:154 - Found 1 custom documentation plugin(s)
+2018-09-26 17:28:37,454 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-26 17:28:37,723 [main] INFO  com.dreawer.favorite.FavoriteApplicationTests:57 - Started FavoriteApplicationTests in 15.309 seconds (JVM running for 17.147)
+2018-09-26 17:30:32,290 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:39 - ResponseCode com.dreawer.favorite.controller.FavoriteController.getFavoritesList(HttpServletRequest)use time:114384
+2018-09-26 17:30:32,304 [main] INFO  com.dreawer.favorite.aop.ControllerAOP:43 - {
+	"code":[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	],
+	"comment":"Completed successfully",
+	"data":[
+		{
+			"id":"6354cda93a7942b6bd805411dc76a317",
+			"name":"测试添加收藏夹002",
+			"favoriteList":[
+				{
+					"collectorId":"84ba09c6c6ef42f1941b75a27be0eedd",
+					"contentId":"345",
+					"contentCategory":"测试添加收藏夹002",
+					"createTime":"Sep 26,
+					 2018 5:16:51 PM",
+					"status":"DEFAULT",
+					"id":"62450483cf6c43b3ba8f180c6046bd18"
+				}
+			]
+		}
+	]
+}
+2018-09-26 17:30:32,412 [Thread-5] INFO  com.alibaba.druid.pool.DruidDataSource:1823 - {dataSource-1} closed

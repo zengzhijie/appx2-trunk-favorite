@@ -126,7 +126,6 @@ public class FavoriteController extends BaseController {
             if (favorites == null || favorites2 != null) {
                 return Error.APPSERVER;
             }
-
         favorites.setName(form.getName());
         favorites.setCollectorId(collectorId);
         favorites.setUpdateTime(getNow());
