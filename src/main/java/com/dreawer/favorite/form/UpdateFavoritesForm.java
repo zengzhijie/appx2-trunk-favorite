@@ -1,7 +1,10 @@
 package com.dreawer.favorite.form;
 import static com.dreawer.favorite.constants.MessageConstants.*;
+
+import io.swagger.annotations.ApiModel;
 import org.hibernate.validator.constraints.NotEmpty;
 
+@ApiModel(value="修改收藏夹表单")
 public class UpdateFavoritesForm extends AddFavoritesForm {
 
     @NotEmpty(message = VAL_FAVORITES_ID_NOT_EMPTY)

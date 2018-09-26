@@ -1,12 +1,13 @@
 package com.dreawer.favorite.form;
 
 
+import io.swagger.annotations.ApiModel;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import static com.dreawer.favorite.constants.MessageConstants.*;
 
-
+@ApiModel(value = "添加收藏夹表单")
 public class AddFavoritesForm {
 
     @Length(min = 1, max = 100, message = VAL_FAVORITES_NAME_LENGTH)
