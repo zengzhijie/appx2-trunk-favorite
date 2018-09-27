@@ -84,8 +84,8 @@ public class FavoriteController extends BaseController {
 
         //根据网关用户id查询用户
        // String collectorId = req.getHeader("userid");
-        String collectorId = "qwe";
-        String name = "qwe";
+        String collectorId = "qweR";
+        String name = "qweR";
 
         Favorites oldFavorites = favoritesService.getFavoritesByName(name, collectorId);
         if (oldFavorites != null) {
