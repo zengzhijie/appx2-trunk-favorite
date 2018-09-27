@@ -4,7 +4,7 @@ package com.dreawer.favorite.constants;
  * <CODE>DAOConstants</CODE> 领域模型常量。
  * 该类用于定义“领域对象”和“对象属性”的代码规范性常量，以统一工程中有关于对象、属性名称的代码规范。
  *
- * @author David Dai
+ * @author zengzhijie
  * @version 2.0
  * @since Favorite 1.0
  */

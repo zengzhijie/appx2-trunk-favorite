@@ -7,7 +7,7 @@ import com.dreawer.domain.BaseDomain;
 /**
  * <CODE>Favorites</CODE> 收藏夹实体类。
  *
- * @author kael
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */

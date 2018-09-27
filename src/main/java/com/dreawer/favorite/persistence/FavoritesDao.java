@@ -16,7 +16,7 @@ import com.dreawer.favorite.domain.Favorites;
 /**
  * <CODE>FavoritesDao</CODE> 收藏夹 DAO 类，负责对收藏夹实例数据进行访问和操作。
  *
- * @author Kael
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */
@@ -28,7 +28,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param favorites 收藏夹信息。
      * @return 成功保存的记录数。
-     * @author kael
+     * @author zengzhijie
      * @since 1.0
      */
     public int save(Favorites favorites) {
@@ -40,7 +40,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param id 收藏夹信息。
      * @return 成功删除的记录数。
-     * @author kael
+     * @author zengzhijie
      * @since 1.0
      */
     public int delete(String id) {
@@ -52,7 +52,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param favorites 收藏夹信息。
      * @return 成功更新的记录数。
-     * @author kael
+     * @author zengzhijie
      * @since 1.0
      */
     public int update(Favorites favorites) {
@@ -64,7 +64,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param collectorId 收藏者。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author Kael
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorites> findList(String collectorId) {
@@ -78,7 +78,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param name 收藏夹名称。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author Kael
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorites findByName(String name, String collectorId) {
@@ -93,7 +93,7 @@ public class FavoritesDao extends MyBatisBaseDao<Favorites> {
      *
      * @param id 收藏夹id。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author Kael
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorites findById(String id) {

@@ -158,7 +158,6 @@ public class FavoriteApplicationTests {
                 .sessionAttr("111", "111"))
                 .andDo(print());*/
 
-
     }
 
 }

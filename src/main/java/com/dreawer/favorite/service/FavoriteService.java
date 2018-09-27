@@ -15,7 +15,7 @@ import static com.dreawer.favorite.constants.DAOConstants.*;
 /**
  * <CODE>FavoriteService</CODE> 收藏信息服务。
  *
- * @author Sdanly
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */
@@ -29,7 +29,7 @@ public class FavoriteService {
      * 添加收藏。
      *
      * @param favorite 收藏信息。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public void add(Favorite favorite) {
@@ -41,7 +41,7 @@ public class FavoriteService {
      *
      * @param favorite 收藏信息。
      * @return 成功更新的记录数。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public int updateFavorite(Favorite favorite) {
@@ -53,7 +53,7 @@ public class FavoriteService {
      *
      * @param id 收藏内容id。
      * @return 收藏信息。如果存在返回收藏信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorite getFavorite(String id) {
@@ -66,7 +66,7 @@ public class FavoriteService {
      * @param collectorId 收藏者。
      * @param contentId   被收藏内容。
      * @return 收藏信息。如果存在返回收藏信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorite getFavorite(String collectorId, String contentId) {
@@ -79,7 +79,7 @@ public class FavoriteService {
      * @param collectorId 收藏者。
      * @param pagesize  分页最大记录数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorite> getFavorites(String collectorId, Integer pagesize) {
@@ -93,7 +93,7 @@ public class FavoriteService {
      * @param startTime 起始时间。
      * @param pagesize  分页最大记录数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorite> getFavorites(String collectorId, Timestamp startTime, Integer pagesize) {
@@ -106,7 +106,7 @@ public class FavoriteService {
      * @param collectorId 收藏者。
      * @param startTime 起始时间。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorite> getFavorites(String collectorId, Timestamp startTime) {

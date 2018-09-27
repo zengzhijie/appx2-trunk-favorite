@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import static com.dreawer.favorite.constants.MessageConstants.*;
 
+
 @ApiModel(value = "添加收藏夹表单")
 public class AddFavoritesForm {
 

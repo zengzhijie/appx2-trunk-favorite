@@ -4,7 +4,7 @@ package com.dreawer.favorite.constants;
  * <CODE>RequestConstants</CODE> 控制器层常量类。
  * 该类用于定义“请求链接”和“页面地址”的代码规范性常量，以统一工程中有关于对象、属性名称的代码规范。
  *
- * @author David Dai
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */

@@ -18,7 +18,7 @@ import com.dreawer.favorite.lang.ContentStatus;
 /**
  * <CODE>FavoriteDao</CODE> 收藏 DAO 类，负责对收藏实例数据进行访问和操作。
  *
- * @author David Dai
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */
@@ -30,7 +30,7 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite> {
      *
      * @param favorite 收藏信息。
      * @return 成功保存的记录数。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public int save(Favorite favorite) {
@@ -42,7 +42,7 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite> {
      *
      * @param favorite 收藏信息。
      * @return 成功更新的记录数。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public int updateFavorite(Favorite favorite) {
@@ -54,7 +54,7 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite> {
      *
      * @param id 收藏ID号。
      * @return 收藏内容。如果存在返回收藏内容，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorite findFavorite(String id) {
@@ -67,7 +67,7 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite> {
      * @param collectorId 收藏者。
      * @param contentId   被收藏内容。
      * @return 收藏信息。如果存在返回收藏信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorite findFavorite(String collectorId, String contentId) {
@@ -84,7 +84,7 @@ public class FavoriteDao extends MyBatisBaseDao<Favorite> {
      * @param startTime  查询纪录开始时间。
      * @param maxResults 分页记录总数。
      * @return 收藏列表。如果存在返回收藏列表，否则返回长度为0的收藏列表。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorite> findFavorites(String collectorId, Timestamp startTime, Integer maxResults) {

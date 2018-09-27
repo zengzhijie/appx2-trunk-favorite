@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * <CODE>Status</CODE> 内容状态。
  *
- * @author David Dai
+ * @author zengzhijie
  * @version 1.0
  * @since Dreawer 1.0
  */

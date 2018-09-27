@@ -11,7 +11,7 @@ import com.dreawer.favorite.persistence.FavoritesDao;
 /**
  * <CODE>FavoritesService</CODE> 收藏信息服务。
  *
- * @author Sdanly
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */
@@ -25,7 +25,7 @@ public class FavoritesService {
      * 添加收藏夹。
      *
      * @param favorites 收藏夹信息。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public void add(Favorites favorites) {
@@ -37,7 +37,7 @@ public class FavoritesService {
      *
      * @param id 收藏夹id。
      * @return 成功删除的记录数。
-     * @author kael
+     * @author zengzhijie
      * @since 1.0
      */
     public int delete(String id) {
@@ -49,7 +49,7 @@ public class FavoritesService {
      *
      * @param favorites 收藏夹信息。
      * @return 成功更新的记录数。
-     * @author kael
+     * @author zengzhijie
      * @since 1.0
      */
     public int update(Favorites favorites) {
@@ -61,7 +61,7 @@ public class FavoritesService {
      *
      * @param collectorId 收藏夹内容id。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public List<Favorites> getFavoritesList(String collectorId) {
@@ -73,7 +73,7 @@ public class FavoritesService {
      *
      * @param name 收藏夹名称。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorites getFavoritesByName(String name, String collectorId) {
@@ -85,7 +85,7 @@ public class FavoritesService {
      *
      * @param id 收藏夹id。
      * @return 收藏夹信息。如果存在返回收藏夹信息，否则返回null。
-     * @author David Dai
+     * @author zengzhijie
      * @since 1.0
      */
     public Favorites getFavoritesById(String id) {

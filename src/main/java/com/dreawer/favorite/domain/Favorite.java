@@ -9,7 +9,7 @@ import com.dreawer.favorite.lang.ContentStatus;
 /**
  * <CODE>Favorite</CODE> 收藏实体类。
  *
- * @author David Dai
+ * @author zengzhijie
  * @version 1.0
  * @since Favorite 1.0
  */
