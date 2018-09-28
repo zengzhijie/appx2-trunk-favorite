@@ -6,14 +6,11 @@ import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import com.dreawer.persistence.mybatis.MyBatisBaseDao;
 import org.springframework.stereotype.Repository;
-
-//import com.dreawer.dream.domain.Content;
 import com.dreawer.favorite.domain.Favorite;
 import com.dreawer.favorite.lang.ContentStatus;
-//import com.dreawer.sso.domain.User;
+
 
 /**
  * <CODE>FavoriteDao</CODE> 收藏 DAO 类，负责对收藏实例数据进行访问和操作。
