@@ -300,4 +300,6 @@ public class FavoriteController extends BaseController {
         }
         return Success.SUCCESS(favorite);
     }
+
+
 }
