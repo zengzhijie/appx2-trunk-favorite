@@ -11,7 +11,6 @@ import com.dreawer.persistence.mybatis.MyBatisBaseDao;
 import org.springframework.stereotype.Repository;
 
 import com.dreawer.favorite.domain.Favorites;
-//import com.dreawer.sso.domain.User;
 
 /**
  * <CODE>FavoritesDao</CODE> 收藏夹 DAO 类，负责对收藏夹实例数据进行访问和操作。
