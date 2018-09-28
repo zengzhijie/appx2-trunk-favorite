@@ -11,6 +11,7 @@ package com.dreawer.favorite.constants;
  */
 public final class ControllerConstants {
 
+	int i  =0;
     /**
      * 私有构造器。
      */

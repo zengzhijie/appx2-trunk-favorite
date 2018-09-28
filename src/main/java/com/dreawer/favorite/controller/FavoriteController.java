@@ -15,7 +15,9 @@ import javax.validation.Valid;
 import com.dreawer.responsecode.rcdt.*;
 import com.dreawer.responsecode.rcdt.Error;
 import io.swagger.annotations.ApiOperation;
+import javassist.CtMethod;
 import org.apache.log4j.Logger;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -52,12 +54,13 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 添加收藏夹。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
 
-    @ApiOperation(value="添加收藏夹", notes="根据form表单来指定添加收藏夹的信息")
+    @ApiOperation(value = "添加收藏夹", notes = "根据form表单来指定添加收藏夹的信息")
     @RequestMapping(value = REQ_FAVORITES_ADD, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode addFavorites(HttpServletRequest req,
@@ -69,7 +72,7 @@ public class FavoriteController extends BaseController {
         String collectorId = req.getHeader("userid");
         Favorites oldFavorites = favoritesService.getFavoritesByName(form.getName(), collectorId);
         if (oldFavorites != null) {
-            return  Error.APPSERVER;
+            return Error.APPSERVER;
         }
         Favorites favorites = new Favorites();
         favorites.setName(form.getName());
@@ -83,11 +86,12 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 删除收藏夹。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="删除收藏夹", notes="根据收藏夹id来指定删除")
+    @ApiOperation(value = "删除收藏夹", notes = "根据收藏夹id来指定删除")
     @RequestMapping(value = REQ_FAVORITES_DELETE, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode deleteFavorites(HttpServletRequest req,
@@ -107,11 +111,12 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 更新收藏夹。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="更新收藏夹", notes="根据form表单来更新收藏夹的信息")
+    @ApiOperation(value = "更新收藏夹", notes = "根据form表单来更新收藏夹的信息")
     @RequestMapping(value = REQ_FAVORITES_EDIT, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode editFavorites(HttpServletRequest req,
@@ -125,24 +130,25 @@ public class FavoriteController extends BaseController {
 
         //判断该收藏夹名称是否存在
         Favorites favorites2 = favoritesService.getFavoritesByName(form.getName(), collectorId);
-            if (favorites == null || favorites2 != null) {
-                return Error.APPSERVER;
-            }
+        if (favorites == null || favorites2 != null) {
+            return Error.APPSERVER;
+        }
         favorites.setName(form.getName());
         favorites.setCollectorId(collectorId);
         favorites.setUpdateTime(getNow());
         favoritesService.update(favorites);
-        return  Success.SUCCESS(favorites);
+        return Success.SUCCESS(favorites);
     }
 
 
     /**
      * 功能描述: 获取收藏夹列表。
+     *
      * @param: [req]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="获取收藏夹列表", notes="根据url获取收藏夹列表")
+    @ApiOperation(value = "获取收藏夹列表", notes = "根据url获取收藏夹列表")
     @RequestMapping(value = REQ_FAVORITES_LIST, method = RequestMethod.GET)
     public @ResponseBody
     ResponseCode getFavoritesList(HttpServletRequest req) {
@@ -165,16 +171,17 @@ public class FavoriteController extends BaseController {
             viewFavorites.setFavoriteList(list);
             viewFavoritesList.add(viewFavorites);
         }
-        return  Success.SUCCESS(viewFavoritesList);
+        return Success.SUCCESS(viewFavoritesList);
     }
 
     /**
      * 功能描述: 收藏内容。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="收藏内容", notes="根据form表单来判断是添加或更新")
+    @ApiOperation(value = "收藏内容", notes = "根据form表单来判断是添加或更新")
     @RequestMapping(value = REQ_FAVORITE, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode favorite(HttpServletRequest req,
@@ -208,11 +215,12 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 取消收藏。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="取消收藏", notes="根据form表单来取消收藏")
+    @ApiOperation(value = "取消收藏", notes = "根据form表单来取消收藏")
     @RequestMapping(value = REQ_UNFAVORITE, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode unfavorite(HttpServletRequest req,
@@ -241,11 +249,12 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 获取指定收藏者的收藏信息。
+     *
      * @param: [req]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="获取指定收藏者的收藏信息", notes="根据url获取指定收藏者的收藏信息")
+    @ApiOperation(value = "获取指定收藏者的收藏信息", notes = "根据url获取指定收藏者的收藏信息")
     @RequestMapping(value = REQ_GET_USERFAVORITES, method = RequestMethod.GET)
     public @ResponseBody
     ResponseCode getUserFavorites(HttpServletRequest req) {
@@ -272,11 +281,12 @@ public class FavoriteController extends BaseController {
 
     /**
      * 功能描述: 更新收藏（收藏分类）。
+     *
      * @param: [req, form, result]
      * @return: com.dreawer.responsecode.rcdt.ResponseCode
      * @auther: zengzhijie
      */
-    @ApiOperation(value="更新收藏", notes="根据form表单更新收藏")
+    @ApiOperation(value = "更新收藏", notes = "根据form表单更新收藏")
     @RequestMapping(value = REQ_UPDATE_FAVORITE, method = RequestMethod.POST)
     public @ResponseBody
     ResponseCode updateFavorite(HttpServletRequest req,
