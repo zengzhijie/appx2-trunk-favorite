@@ -10,8 +10,7 @@ package com.dreawer.favorite.constants;
  * @since Favorite 1.0
  */
 public final class ControllerConstants {
-
-	int i  =0;
+	
     /**
      * 私有构造器。
      */
