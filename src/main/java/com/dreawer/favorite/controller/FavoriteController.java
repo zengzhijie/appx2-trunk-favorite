@@ -65,22 +65,29 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode addFavorites(HttpServletRequest req,
                               @RequestBody @Valid AddFavoritesForm form, BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
-        }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        Favorites oldFavorites = favoritesService.getFavoritesByName(form.getName(), collectorId);
-        if (oldFavorites != null) {
+
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            Favorites oldFavorites = favoritesService.getFavoritesByName(form.getName(), collectorId);
+            if (oldFavorites != null) {
+                return Error.APPSERVER;
+            }
+            Favorites favorites = new Favorites();
+            favorites.setName(form.getName());
+            favorites.setCollectorId(collectorId);
+            favorites.setCreateTime(getNow());
+            favoritesService.add(favorites);
+            return Success.SUCCESS(favorites);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
             return Error.APPSERVER;
         }
-        Favorites favorites = new Favorites();
-        favorites.setName(form.getName());
-        favorites.setCollectorId(collectorId);
-        favorites.setCreateTime(getNow());
-        favoritesService.add(favorites);
-
-        return Success.SUCCESS(favorites);
     }
 
 
@@ -96,17 +103,24 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode deleteFavorites(HttpServletRequest req,
                                  @RequestBody @Valid UpdateFavoritesForm form, BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            Favorites favorites = favoritesService.getFavoritesByName(form.getName(), collectorId);
+            if (favorites == null) {
+                return Error.DB(VAL__FAVORITES_NOTFOUND);
+            }
+            favoritesService.delete(favorites.getId());
+            return Success.SUCCESS(favorites);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        Favorites favorites = favoritesService.getFavoritesByName(form.getName(), collectorId);
-        if (favorites == null) {
-            return Error.DB(VAL__FAVORITES_NOTFOUND);
-        }
-        favoritesService.delete(favorites.getId());
-        return Success.SUCCESS(favorites);
     }
 
     /**
@@ -121,23 +135,30 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode editFavorites(HttpServletRequest req,
                                @RequestBody @Valid UpdateFavoritesForm form, BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
-        }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        Favorites favorites = favoritesService.getFavoritesById(form.getId());
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            Favorites favorites = favoritesService.getFavoritesById(form.getId());
 
-        //判断该收藏夹名称是否存在
-        Favorites favorites2 = favoritesService.getFavoritesByName(form.getName(), collectorId);
-        if (favorites == null || favorites2 != null) {
+            //判断该收藏夹名称是否存在
+            Favorites favorites2 = favoritesService.getFavoritesByName(form.getName(), collectorId);
+            if (favorites == null || favorites2 != null) {
+                return Error.APPSERVER;
+            }
+            favorites.setName(form.getName());
+            favorites.setCollectorId(collectorId);
+            favorites.setUpdateTime(getNow());
+            favoritesService.update(favorites);
+            return Success.SUCCESS(favorites);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
             return Error.APPSERVER;
         }
-        favorites.setName(form.getName());
-        favorites.setCollectorId(collectorId);
-        favorites.setUpdateTime(getNow());
-        favoritesService.update(favorites);
-        return Success.SUCCESS(favorites);
     }
 
 
@@ -152,26 +173,33 @@ public class FavoriteController extends BaseController {
     @RequestMapping(value = REQ_FAVORITES_LIST, method = RequestMethod.GET)
     public @ResponseBody
     ResponseCode getFavoritesList(HttpServletRequest req) {
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        List<Favorites> favoritesList = favoritesService.getFavoritesList(collectorId);
-        List<Favorite> favoriteList = favoriteService.getFavorites(collectorId, getNow());
-        List<ViewFavorites> viewFavoritesList = new ArrayList<ViewFavorites>();
-        for (Favorites favorites : favoritesList) {
-            ViewFavorites viewFavorites = new ViewFavorites();
-            String name = favorites.getName();
-            viewFavorites.setId(favorites.getId());
-            viewFavorites.setName(name);
-            List<Favorite> list = new ArrayList<>();
-            for (Favorite favorite : favoriteList) {
-                if (favorite.getContentCategory().equals(name)) {
-                    list.add(favorite);
+        try {
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            List<Favorites> favoritesList = favoritesService.getFavoritesList(collectorId);
+            List<Favorite> favoriteList = favoriteService.getFavorites(collectorId, getNow());
+            List<ViewFavorites> viewFavoritesList = new ArrayList<ViewFavorites>();
+            for (Favorites favorites : favoritesList) {
+                ViewFavorites viewFavorites = new ViewFavorites();
+                String name = favorites.getName();
+                viewFavorites.setId(favorites.getId());
+                viewFavorites.setName(name);
+                List<Favorite> list = new ArrayList<>();
+                for (Favorite favorite : favoriteList) {
+                    if (favorite.getContentCategory().equals(name)) {
+                        list.add(favorite);
+                    }
                 }
+                viewFavorites.setFavoriteList(list);
+                viewFavoritesList.add(viewFavorites);
             }
-            viewFavorites.setFavoriteList(list);
-            viewFavoritesList.add(viewFavorites);
+            return Success.SUCCESS(viewFavoritesList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        return Success.SUCCESS(viewFavoritesList);
     }
 
     /**
@@ -187,30 +215,36 @@ public class FavoriteController extends BaseController {
     ResponseCode favorite(HttpServletRequest req,
                           @RequestBody @Valid AddFavoriteForm form,
                           BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            String contentId = form.getObjectId();
+            String contentCategory = form.getCategory();
+            // 添加收藏
+            Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
+            if (favorite == null) {
+                favorite = new Favorite();
+                favorite.setCollectorId(collectorId);
+                favorite.setContentId(contentId);
+                favorite.setContentCategory(contentCategory);
+                favoriteService.add(favorite);
+            } else if (favorite.getStatus() == ContentStatus.DELETED) {
+                favorite.setStatus(ContentStatus.DEFAULT);
+                favorite.setCollectorId(collectorId);
+                favorite.setContentId(contentId);
+                favorite.setContentCategory(contentCategory);
+                favoriteService.updateFavorite(favorite);
+            }
+            return Success.SUCCESS(favorite);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        String contentId = form.getObjectId();
-        String contentCategory = form.getCategory();
-        // 添加收藏
-        Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
-        if (favorite == null) {
-            favorite = new Favorite();
-            favorite.setCollectorId(collectorId);
-            favorite.setContentId(contentId);
-            favorite.setContentCategory(contentCategory);
-            favoriteService.add(favorite);
-        } else if (favorite.getStatus() == ContentStatus.DELETED) {
-            favorite.setStatus(ContentStatus.DEFAULT);
-            favorite.setCollectorId(collectorId);
-            favorite.setContentId(contentId);
-            favorite.setContentCategory(contentCategory);
-            favoriteService.updateFavorite(favorite);
-        }
-        return Success.SUCCESS(favorite);
-
     }
 
     /**
@@ -225,25 +259,32 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode unfavorite(HttpServletRequest req,
                             @RequestBody @Valid AddFavoriteForm form, BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            // 验证内容是否合规
+            String contentId = form.getObjectId();
+            String contentCategory = form.getCategory();
+            // 取消收藏
+            Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
+            if (favorite != null && favorite.getStatus() == ContentStatus.DEFAULT) {
+                favorite.setStatus(ContentStatus.DELETED);
+                favorite.setCollectorId(collectorId);
+                favorite.setContentId(contentId);
+                favorite.setContentCategory(contentCategory);
+                favorite.setUpdateTime(getNow());
+                favoriteService.updateFavorite(favorite);
+            }
+            return Success.SUCCESS(favorite);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        // 验证内容是否合规
-        String contentId = form.getObjectId();
-        String contentCategory = form.getCategory();
-        // 取消收藏
-        Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
-        if (favorite != null && favorite.getStatus() == ContentStatus.DEFAULT) {
-            favorite.setStatus(ContentStatus.DELETED);
-            favorite.setCollectorId(collectorId);
-            favorite.setContentId(contentId);
-            favorite.setContentCategory(contentCategory);
-            favorite.setUpdateTime(getNow());
-            favoriteService.updateFavorite(favorite);
-        }
-        return Success.SUCCESS(favorite);
     }
 
 
@@ -259,24 +300,31 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode getUserFavorites(HttpServletRequest req) {
 
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        // 查询用户收藏
-        List<Favorite> favorites = new ArrayList<>();
-        if (req.getParameter("pageSize") != null) {
-            Integer pageSize = Integer.parseInt(req.getParameter("pageSize"));
-            favorites = favoriteService.getFavorites(collectorId, getNow(), pageSize);
-        } else {
-            favorites = favoriteService.getFavorites(collectorId, getNow());
+        try {
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            // 查询用户收藏
+            List<Favorite> favorites = new ArrayList<>();
+            if (req.getParameter("pageSize") != null) {
+                Integer pageSize = Integer.parseInt(req.getParameter("pageSize"));
+                favorites = favoriteService.getFavorites(collectorId, getNow(), pageSize);
+            } else {
+                favorites = favoriteService.getFavorites(collectorId, getNow());
+            }
+            List<ViewFavoriteContent> viewFavoriteContents = new ArrayList<ViewFavoriteContent>();
+            for (Favorite favorite : favorites) {
+                ViewFavoriteContent viewFavorite = new ViewFavoriteContent();
+                viewFavorite.setContentId(favorite.getContentId());
+                viewFavorite.setCategory(favorite.getContentCategory());
+                viewFavoriteContents.add(viewFavorite);
+            }
+            return Success.SUCCESS(viewFavoriteContents);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        List<ViewFavoriteContent> viewFavoriteContents = new ArrayList<ViewFavoriteContent>();
-        for (Favorite favorite : favorites) {
-            ViewFavoriteContent viewFavorite = new ViewFavoriteContent();
-            viewFavorite.setContentId(favorite.getContentId());
-            viewFavorite.setCategory(favorite.getContentCategory());
-            viewFavoriteContents.add(viewFavorite);
-        }
-        return Success.SUCCESS(viewFavoriteContents);
     }
 
     /**
@@ -291,25 +339,30 @@ public class FavoriteController extends BaseController {
     public @ResponseBody
     ResponseCode updateFavorite(HttpServletRequest req,
                                 @RequestBody @Valid AddFavoriteForm form, BindingResult result) {
-        if (result.hasErrors()) {
-            return checkErrors(result);
+        try {
+            if (result.hasErrors()) {
+                return checkErrors(result);
+            }
+            //根据网关用户id查询用户
+            String collectorId = req.getHeader("userid");
+            // 验证内容是否合规
+            String contentId = form.getObjectId();
+            String contentCategory = form.getCategory();
+            // 更新收藏
+            Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
+            if (favorite != null && favorite.getStatus() == ContentStatus.DEFAULT) {
+                favorite.setContentId(contentId);
+                favorite.setContentCategory(contentCategory);
+                favorite.setCollectorId(collectorId);
+                favorite.setUpdateTime(getNow());
+                favoriteService.updateFavorite(favorite);
+            }
+            return Success.SUCCESS(favorite);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("error",e);
+            // 返回失败标志及信息
+            return Error.APPSERVER;
         }
-        //根据网关用户id查询用户
-        String collectorId = req.getHeader("userid");
-        // 验证内容是否合规
-        String contentId = form.getObjectId();
-        String contentCategory = form.getCategory();
-        // 更新收藏
-        Favorite favorite = favoriteService.getFavorite(collectorId, contentId);
-        if (favorite != null && favorite.getStatus() == ContentStatus.DEFAULT) {
-            favorite.setContentId(contentId);
-            favorite.setContentCategory(contentCategory);
-            favorite.setCollectorId(collectorId);
-            favorite.setUpdateTime(getNow());
-            favoriteService.updateFavorite(favorite);
-        }
-        return Success.SUCCESS(favorite);
     }
-
-
 }
